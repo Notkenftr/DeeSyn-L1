@@ -1,0 +1,12 @@
+[BUG]: no found input "Core\DeepMyst"
+
+## Command Line
+C:\Users\Kenftr\PycharmProjects\DeepMyst-l1\.venv\Scripts\pyarmor gen Core/DeepMyst
+
+## Environments
+Python 3.13.3
+Pyarmor 9.1.5 (trial), 000000, non-profits
+Platform windows.x86_64
+Native windows.amd64
+Home C:\Users\Kenftr\.pyarmor
+

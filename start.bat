@@ -1,3 +1,14 @@
 @echo off
+echo Checking libraries...
+
+python -c "import pkg_resources; pkg_resources.require('aiohappyeyeballs==2.6.1'); pkg_resources.require('aiohttp==3.11.18'); pkg_resources.require('aiosignal==1.3.2'); pkg_resources.require('altgraph==0.17.4'); pkg_resources.require('annotated-types==0.7.0'); pkg_resources.require('attrs==25.3.0'); pkg_resources.require('audioop-lts==0.2.1'); pkg_resources.require('cachetools==5.5.2'); pkg_resources.require('certifi==2025.4.26'); pkg_resources.require('charset-normalizer==3.4.1'); pkg_resources.require('colorama==0.4.6'); pkg_resources.require('discord.py==2.5.2'); pkg_resources.require('frozenlist==1.6.0'); pkg_resources.require('google-ai-generativelanguage==0.6.15'); pkg_resources.require('google-api-core==2.24.2'); pkg_resources.require('google-api-python-client==2.168.0'); pkg_resources.require('google-auth==2.39.0'); pkg_resources.require('google-auth-httplib2==0.2.0'); pkg_resources.require('google-generativeai==0.8.5'); pkg_resources.require('googleapis-common-protos==1.70.0'); pkg_resources.require('grpcio==1.71.0'); pkg_resources.require('grpcio-status==1.71.0'); pkg_resources.require('httplib2==0.22.0'); pkg_resources.require('idna==3.10'); pkg_resources.require('markdown-it-py==3.0.0'); pkg_resources.require('mdurl==0.1.2'); pkg_resources.require('multidict==6.4.3'); pkg_resources.require('packaging==25.0'); pkg_resources.require('pefile==2023.2.7'); pkg_resources.require('propcache==0.3.1'); pkg_resources.require('proto-plus==1.26.1'); pkg_resources.require('protobuf==5.29.4'); pkg_resources.require('pyarmor==9.1.5'); pkg_resources.require('pyarmor.cli.core==7.6.6'); pkg_resources.require('pyasn1==0.6.1'); pkg_resources.require('pyasn1_modules==0.4.2'); pkg_resources.require('pydantic==2.11.3'); pkg_resources.require('pydantic_core==2.33.1'); pkg_resources.require('Pygments==2.19.1'); pkg_resources.require('pyinstaller==6.13.0'); pkg_resources.require('pyinstaller-hooks-contrib==2025.3'); pkg_resources.require('pyparsing==3.2.3'); pkg_resources.require('pywin32-ctypes==0.2.3'); pkg_resources.require('PyYAML==6.0.2'); pkg_resources.require('requests==2.32.3'); pkg_resources.require('rich==14.0.0'); pkg_resources.require('rsa==4.9.1'); pkg_resources.require('setuptools==79.0.1'); pkg_resources.require('tqdm==4.67.1'); pkg_resources.require('typing-inspection==0.4.0'); pkg_resources.require('typing_extensions==4.13.2'); pkg_resources.require('uritemplate==4.1.1'); pkg_resources.require('urllib3==2.4.0'); pkg_resources.require('yarl==1.20.0')" >nul 2>nul
+if %errorlevel% neq 0 (
+    echo Libraries not installed, installing required libraries...
+    pip install -r requirements.txt
+) else (
+    echo Libraries already installed, no need to install again.
+)
+
+echo Installation completed, running the app...
 python app.py
 pause

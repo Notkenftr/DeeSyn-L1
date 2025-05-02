@@ -41,4 +41,4 @@ def setting():
     if user_chose == 3:
         print("Bot đang khởi động vui lòng chờ...")
         time.sleep(2)
-        os.system('python3 Core/DeepMyst.py')
+        os.system('python3 Core/DeeSyn.py')
